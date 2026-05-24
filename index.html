@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Tommy Falk</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top">TF</a>
+      <nav class="main-nav" aria-label="Hauptnavigation">
+        <a href="#projects">Projekte</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">Über mich</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+      <button class="theme-button" id="themeToggle" type="button" aria-label="Design wechseln">◐</button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <canvas id="heroCanvas" aria-hidden="true"></canvas>
+        <div class="hero-content">
+          <p class="eyebrow">Junior Developer</p>
+          <h1>Tommy Falk </h1>
+          <p>
+            Willkommen auf meinem Portfolio!
+          </p>
+          <p>
+           Ich bin Tommy, ein leidenschaftlicher Junior Developer.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">Projekte ansehen</a>
+            <a class="button secondary" href="#contact">Kontakt</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats">
+        <article>
+          <strong>2026</strong>
+          <span>Ausbildung als Fachinformatiker abgeschlossen</span>
+        </article>
+        <article>
+          <strong>Frontend</strong>
+          <span>Fokus auf HTML, CSS und JavaScript</span>
+        </article>
+        <article>
+          <strong>C# .NET</strong>
+          <span>Kenntnisse in Anwendungslogik und WPF-Oberflächen</span>
+        </article>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-title">
+          <p class="eyebrow">Auswahl</p>
+          <h2>Projekte</h2>
+        </div>
+        <div class="filter-bar">
+          <button class="filter-button active" data-filter="all" type="button">Alle</button>
+          <button class="filter-button" data-filter="web" type="button">Web</button>
+          <button class="filter-button" data-filter="app" type="button">App</button>
+          <button class="filter-button" data-filter="design" type="button">Design</button>
+        </div>
+        <div class="project-grid" id="projectGrid"></div>
+      </section>
+
+      <section class="section split" id="skills">
+        <div>
+          <p class="eyebrow">Tech Stack</p>
+          <h2>Womit ich arbeite</h2>
+        </div>
+        <div class="skills-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>C#</span>
+          <span>.NET</span>
+          <span>WPF</span>
+          <span>Git</span>
+          <span>Visual Studio Code</span>
+          <span>Responsive Design</span>
+          <span>UI Grundlagen</span>
+        </div>
+      </section>
+
+      <section class="section about" id="about">
+        <figure class="portrait">
+          <img src="assets/tommy-falk-portrait.jpeg" alt="Portrait von Tommy Falk" />
+        </figure>
+        <div>
+          <p class="eyebrow">Lebenslauf</p>
+          <h2>Vom CNC-Mechaniker zum Web-Developer</h2>
+          <p>
+            Im Januar 2015 schloss ich meine erste Ausbildung zum Zerspanungsmechaniker Fachrichtung Fräsen ab.
+            Nach 3 Jahren Berufserfahrung in diesem Bereich entschied ich mich, eine neue Herausforderung zu suchen und ging im September 2018 zur Bundeswehr, wo ich als IT-Soldat tätig war.
+            Dort erhielt ich erste Einblicke in die Netzwerktechnik und entwickelte ein stetig wachsendes Interesse an der IT-Branche. Da ich schon vorher sehr am Programmieren interessiert war,
+            entschied ich mich nach meiner Bundeswehrzeit, eine zweite Ausbildung zum Fachinformatiker für Anwendungsentwicklung zu beginnen.
+            Diese schloss ich nach zweieinhalb Jahren im Februar 2026 erfolgreich ab.
+            </p>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div>
+          <p class="eyebrow">Kontakt</p>
+          <h2>Nehmen wir Kontakt auf</h2>
+        </div>
+        <form id="contactForm">
+          <label>
+            Name
+            <input name="name" type="text" placeholder="Dein Name" required />
+          </label>
+          <label>
+            E-Mail
+            <input name="email" type="email" placeholder="du@example.com" required />
+          </label>
+          <label>
+            Nachricht
+            <textarea name="message" rows="5" placeholder="Worum geht es?" required></textarea>
+          </label>
+          <button class="button primary" type="submit">Nachricht vorbereiten</button>
+          <p id="formStatus" class="form-status" role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Tommy Falk</p>
+      <a href="#top">Nach oben</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
