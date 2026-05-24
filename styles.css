@@ -450,33 +450,40 @@ h2 {
   padding-left: 20px;
 }
 
-form {
+.contact-panel {
   display: grid;
   gap: 18px;
-}
-
-label {
-  display: grid;
-  gap: 8px;
-  color: var(--muted);
-  font-weight: 700;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 14px 15px;
-  border: 1px solid var(--line);
-  background: var(--panel);
-  color: var(--text);
+  align-content: start;
+  padding: 28px;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--accent) 7%, transparent), transparent 54%),
+    var(--panel);
+  border: 1px solid color-mix(in srgb, var(--accent) 24%, var(--line));
   border-radius: 8px;
-  outline: none;
+  box-shadow: var(--shadow);
 }
 
-input:focus,
-textarea:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent);
+.contact-panel p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.email-link {
+  width: fit-content;
+  color: var(--text);
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-weight: 800;
+  word-break: break-word;
+}
+
+.email-link:hover {
+  color: var(--accent);
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .form-status {

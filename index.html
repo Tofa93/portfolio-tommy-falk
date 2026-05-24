@@ -107,22 +107,18 @@
           <p class="eyebrow">Kontakt</p>
           <h2>Nehmen wir Kontakt auf</h2>
         </div>
-        <form id="contactForm">
-          <label>
-            Name
-            <input name="name" type="text" placeholder="Dein Name" required />
-          </label>
-          <label>
-            E-Mail
-            <input name="email" type="email" placeholder="du@example.com" required />
-          </label>
-          <label>
-            Nachricht
-            <textarea name="message" rows="5" placeholder="Worum geht es?" required></textarea>
-          </label>
-          <button class="button primary" type="submit">Nachricht vorbereiten</button>
+        <div class="contact-panel">
+          <p>
+            Schreib mir gerne direkt per E-Mail. Ich freue mich über Austausch,
+            Projektideen oder passende Einstiegsmöglichkeiten.
+          </p>
+          <a class="email-link" href="mailto:tofa93@outlook.de">tofa93@outlook.de</a>
+          <div class="contact-actions">
+            <a class="button primary" href="mailto:tofa93@outlook.de">E-Mail schreiben</a>
+            <button class="button secondary" id="copyEmail" type="button">E-Mail kopieren</button>
+          </div>
           <p id="formStatus" class="form-status" role="status"></p>
-        </form>
+        </div>
       </section>
     </main>
 

@@ -28,8 +28,8 @@ const projects = [
 const projectGrid = document.querySelector("#projectGrid");
 const filterButtons = document.querySelectorAll(".filter-button");
 const themeToggle = document.querySelector("#themeToggle");
-const form = document.querySelector("#contactForm");
 const formStatus = document.querySelector("#formStatus");
+const copyEmail = document.querySelector("#copyEmail");
 const year = document.querySelector("#year");
 const canvas = document.querySelector("#heroCanvas");
 const ctx = canvas.getContext("2d");
@@ -83,14 +83,15 @@ if (localStorage.getItem("theme") !== "light") {
   document.documentElement.classList.add("dark");
 }
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const data = new FormData(form);
-  const subject = encodeURIComponent(`Portfolio Anfrage von ${data.get("name")}`);
-  const body = encodeURIComponent(data.get("message"));
+copyEmail.addEventListener("click", async () => {
+  const email = "tofa93@outlook.de";
 
-  formStatus.textContent = "Danke! Dein E-Mail-Programm wird vorbereitet.";
-  window.location.href = `mailto:deinname@example.com?subject=${subject}&body=${body}`;
+  try {
+    await navigator.clipboard.writeText(email);
+    formStatus.textContent = "E-Mail-Adresse wurde kopiert.";
+  } catch {
+    formStatus.textContent = email;
+  }
 });
 
 let observer;
